@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Materialize Demo</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'img/favicon.png' %}" sizes="32x32">
+    <link href="{% static 'css/ghpages-materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="{% static 'css/icon.css' %}" rel="stylesheet">
+</head>
+<body>
+	<header>
+        <div class="container">
+            <a href="#" data-activates="nav-mobile" class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only">
+                <i class="material-icons">menu</i>
+            </a>
+        </div>
+
+        <ul id="nav-mobile" class="side-nav fixed" style="transform: translateX(0%);">
+            <li class="logo">
+                <a id="logo-container" href="/dashboard/" class="brand-logo">
+                    DASHBOARD
+                </a>
+            </li>
+
+            <li class="bold active"><a href="#" class="waves-effect waves-teal">Option 1</a></li>
+            <li class="bold"><a href="#" class="waves-effect waves-teal">Option 2</a></li>
+            <li class="bold"><a href="#" class="waves-effect waves-teal">Option 3</a></li>
+            <li class="bold"><a href="#" class="waves-effect waves-teal">Option 4</a></li>
+            <li class="bold"><a href="#" class="waves-effect waves-teal">Option 5</a></li>
+            <li class="bold"><a href="#" class="waves-effect waves-teal">Option 6</a></li>
+            <li class="bold"><a href="#" class="waves-effect waves-teal">Option 7</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="section" id="index-banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m9">
+                        <h1 class="header center-on-small-only">{% block title_page %}{% endblock %}</h1>
+                        <h4 class="light red-text text-lighten-4 center-on-small-only">{% block description_page %}{% endblock %}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m9 l10">
+                    <div id="materialdesign" class="section scrollspy">
+                    	{% block content_page %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+    <script src="{% static 'js/materialize.js' %}"></script>
+    <script src="{% static 'js/init.js' %}"></script>
+</body>
+</html>
